@@ -108,3 +108,10 @@ After checking the robustness and its representative power, I will update the fu
   url = {https://arxiv.org/abs/2207.11243}
 }
 ```
+
+## Support
+<p align="center">
+  <img src="assets/polygom_logo.png" width="100"/>
+  <br/>
+  <em>Polygom</em>
+</p>
