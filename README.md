@@ -43,9 +43,9 @@ Both the Polygom8K8K and the custom scans were carefully registered to Meta's to
 
 I divided the full head topology into three distinct regions:
 
-- **Face**
-- **Hair**
-- **Ears**
+- **Face** : 300 Shape (ID) and 300 Expression coefficients
+- **Hair** : 300 Shape coefficients
+- **Ears** : 100 Shape coefficients
 
 For each region, a separate **local PCA model** was trained.
 
