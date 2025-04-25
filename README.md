@@ -1,6 +1,6 @@
 # METHA : Meta's topology-based (Ava-256, Multiface) Template model for Head Avatar
 
----
+
 ## Research purpose ONLY, non-commercial !!
 
 ## Introduction
