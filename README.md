@@ -11,6 +11,7 @@ The model inherits the **exact mesh topology** from Ava-256 and Multiface. For s
 
 This template serves as a lightweight, adaptable foundation for tasks involving facial shape modeling, expression analysis, and identity transfer.
 
+---
 ## Building Process
 
 ### Topology
@@ -37,6 +38,47 @@ The topology was constructed through the following steps:
 In addition to Ava-256 and Multiface, we incorporated the Polygom8K8K dataset and a custom-collected Korean head scan dataset.
 Both the Polygom8K8K and the custom scans were carefully registered to Meta's topology and refined accordingly.
 
-## Model Representational Power
+### Local PCA
+<img src="assets/mesh_seg.jpg" width="400"/>
 
-<video src="assets/tiled.mp4" autoplay loop muted playsinline style="width:100%; max-width:1200px;"></video>
+I divided the full head topology into three distinct regions:
+
+- **Face**
+- **Hair**
+- **Ears**
+
+For each region, a separate **local PCA model** was trained.
+
+This design choice was made to address limitations found in the additional datasets (e.g., **Polygom8K8K**, custom scans), where:
+
+- Some scans **lacked hair regions entirely**
+- Others had **incomplete or corrupted ear geometry**
+
+Instead of discarding such data, I selectively utilized the **valid regions**, enabling robust modeling even with **partial meshes**.
+
+---
+## Model Representational Power
+![](./assets/tiled.gif)
+
+We observed that the model demonstrates **sufficient expressiveness** when applied to various **publicly available 3D head scans**.
+
+- When trained **only on Ava-256 and Multiface**, the model lacked diversity in East Asian facial features due to their underrepresentation.
+- As a result, it showed **limited expressiveness** on datasets such as:
+  - **FaceVerse**
+  - **FaceScape**
+  - **TH2.1**
+
+To address this, we incorporated:
+- **Polygom8K8K**, and
+- Our **custom Korean head scan dataset**
+
+These datasets contain a high proportion of **East Asian subjects**, enabling the model to learn stronger priors for East Asian faces and resulting in **significantly improved expressiveness** across diverse identities.
+
+---
+## Usage
+
+To be updated ! 
+
+This is my personal toy project for helping my future research. Therefore, the completeness can be low. 
+
+After checking the robustness and its representative power, I will update the full codes. 
