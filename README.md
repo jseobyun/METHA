@@ -75,6 +75,11 @@ To address this, I incorporated:
 These datasets contain a high proportion of **East Asian subjects**, enabling the model to learn stronger priors for East Asian faces and resulting in **significantly improved expressiveness** across diverse identities.
 
 
+![](./assets/tiled.jpg)
+Of course, per-vertex UV mapping from Meta's topology has been incorporated into METHA!
+
+Any texture map from Ava-256 and Multiface can be loaded into METHA.
+
 ## Usage
 
 To be updated ! 
