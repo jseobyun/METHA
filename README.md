@@ -74,6 +74,17 @@ To address this, I incorporated:
 
 These datasets contain a high proportion of **East Asian subjects**, enabling the model to learn stronger priors for East Asian faces and resulting in **significantly improved expressiveness** across diverse identities.
 
+![](./assets/tiled_hair.gif)
+
+For the **hair region**, various hairstyles can be generated through **linear interpolation of shape coefficients**.
+
+However, since the **hair region mask cannot be universally defined across all subjects**, some **artifacts or discontinuities may appear near the region boundaries**.  
+This is a known limitation, and future improvements may involve:
+- Applying **blending weights** across region boundaries, or  
+- Redefining the region with an **overlapping boundary strategy**.
+
+The example below shows results from simple **coefficient interpolation** without any regularization or constraints applied.
+
 
 ![](./assets/tiled.jpg)
 Of course, per-vertex UV mapping from Meta's topology has been incorporated into METHA!
