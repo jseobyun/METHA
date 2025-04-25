@@ -11,7 +11,7 @@ The model inherits the **exact mesh topology** from Ava-256 and Multiface. For s
 
 This template serves as a lightweight, adaptable foundation for tasks involving facial shape modeling, expression analysis, and identity transfer.
 
----
+
 ## Building Process
 
 ### Topology
@@ -56,7 +56,7 @@ This design choice was made to address limitations found in the additional datas
 
 Instead of discarding such data, I selectively utilized the **valid regions**, enabling robust modeling even with **partial meshes**.
 
----
+
 ## Model Representational Power
 ![](./assets/tiled.gif)
 
@@ -74,7 +74,7 @@ To address this, we incorporated:
 
 These datasets contain a high proportion of **East Asian subjects**, enabling the model to learn stronger priors for East Asian faces and resulting in **significantly improved expressiveness** across diverse identities.
 
----
+
 ## Usage
 
 To be updated ! 
