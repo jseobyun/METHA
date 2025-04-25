@@ -35,7 +35,7 @@ The topology was constructed through the following steps:
 3. [Polygom8K8K](https://huggingface.co/datasets/polygom-team/8K8K)
 4. Personally collected Korean head scan
 
-In addition to Ava-256 and Multiface, we incorporated the Polygom8K8K dataset and a custom-collected Korean head scan dataset.
+In addition to Ava-256 and Multiface, I incorporated the Polygom8K8K dataset and a custom-collected Korean head scan dataset.
 Both the Polygom8K8K and the custom scans were carefully registered to Meta's topology and refined accordingly.
 
 ### Local PCA
@@ -60,7 +60,7 @@ Instead of discarding such data, I selectively utilized the **valid regions**, e
 ## Model Representational Power
 ![](./assets/tiled.gif)
 
-We observed that the model demonstrates **sufficient expressiveness** when applied to various **publicly available 3D head scans**.
+I observed that the model demonstrates **sufficient expressiveness** when applied to various **publicly available 3D head scans**.
 
 - When trained **only on Ava-256 and Multiface**, the model lacked diversity in East Asian facial features due to their underrepresentation.
 - As a result, it showed **limited expressiveness** on datasets such as:
@@ -68,7 +68,7 @@ We observed that the model demonstrates **sufficient expressiveness** when appli
   - **FaceScape**
   - **TH2.1**
 
-To address this, we incorporated:
+To address this, I incorporated:
 - **Polygom8K8K**, and
 - Our **custom Korean head scan dataset**
 
